@@ -4,7 +4,10 @@ const mongoose = require("mongoose");
 const app = express();
 const PORT = 8008;
 
+//middleware stack
 app.use(express.json()); //expect a json body not urlencoded
+app.use(express.static("public"));
+
 //controllers
 const liquorController = require("./controllers/liquor.js");
 app.use("/liquor", liquorController);
