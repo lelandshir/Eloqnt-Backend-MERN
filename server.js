@@ -10,7 +10,9 @@ app.use(express.static("public"));
 
 //controllers
 const liquorController = require("./controllers/liquor.js");
+const restopController = require("./controllers/restop.js");
 app.use("/liquor", liquorController);
+app.use("/restop", restopController);
 
 //connections
 mongoose.connect("mongodb://localhost:27017/eloqnt", {
