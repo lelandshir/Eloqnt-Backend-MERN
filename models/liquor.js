@@ -8,8 +8,8 @@ const liquorSchema = new mongoose.Schema({
   qtyOnHand: { type: Number, default: 0 },
   par: { type: Number, default: 0 },
   orderQty: { type: Number, default: 0 },
-  notes: String,
   onOrder: { type: Boolean, default: false },
+  notes: String,
 });
 
 const Liquor = mongoose.model("liquor", liquorSchema);
