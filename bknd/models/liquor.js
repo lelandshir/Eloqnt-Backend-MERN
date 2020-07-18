@@ -1,15 +1,13 @@
 const mongoose = require("mongoose").set("debug", true);
 
 const liquorSchema = new mongoose.Schema({
-  brand: { type: String, default: "brand" },
-  type: { type: String, default: "type" },
-  vendor: { type: String, default: "vendor" },
-  cost: { type: Number, default: 0 },
-  qtyOnHand: { type: Number, default: 0 },
-  par: { type: Number, default: 0 },
+  brand: String,
+  type: String,
+  vendor: String,
+  cost: Number,
+  qtyOnHand: Number,
+  par: Number,
   orderQty: { type: Number, default: 0 },
-  onOrder: { type: Boolean, default: false },
-  notes: String,
 });
 
 const Liquor = mongoose.model("liquor", liquorSchema);
