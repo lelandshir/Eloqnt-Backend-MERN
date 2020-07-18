@@ -13,12 +13,12 @@ app.use(cors());
 
 //require routes
 const liquorController = require("./controllers/liquor.js");
-const restopController = require("./controllers/restop.js");
+// const restopController = require("./controllers/restop.js");
 const foodController = require("./controllers/food.js");
 const userController = require("./controllers/user.js");
 //use routes
 app.use("/liquor", liquorController);
-app.use("/restop", restopController);
+// app.use("/restop", restopController);
 app.use("/food", foodController);
 app.use("/user", userController);
 
