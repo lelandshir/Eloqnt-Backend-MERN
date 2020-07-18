@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 8008;
 
 //middleware stack
 app.use(express.json()); //expect a json body not urlencoded
-app.use(express.static("public"));
+// app.use(express.static("public"));
 app.use(cors());
 
 //require routes

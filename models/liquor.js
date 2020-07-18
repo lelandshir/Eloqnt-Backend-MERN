@@ -8,6 +8,7 @@ const liquorSchema = new mongoose.Schema({
   qtyOnHand: Number,
   par: Number,
   orderQty: { type: Number, default: 0 },
+  notes: { type: String, default: "n/a" },
 });
 
 const Liquor = mongoose.model("liquor", liquorSchema);
