@@ -28,7 +28,11 @@ router.post("/", (req, res) => {
 
 router.get("/", (req, res) => {
   Liquor.find({}, (err, allLiquor) => {
-    res.json(allLiquor);
+    if (err) {
+      res.send(err);
+    } else {
+      res.json(allLiquor);
+    }
   });
 });
 

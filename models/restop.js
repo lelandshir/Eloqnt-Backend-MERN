@@ -10,6 +10,7 @@ const restopSchema = new mongoose.Schema({
   onOrder: { type: Boolean, default: false },
   vendor: String,
   notes: String,
+  img: String,
 });
 
 const Restop = mongoose.model("restop", restopSchema);
