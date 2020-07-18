@@ -13,23 +13,19 @@ app.use(cors());
 
 //require routes
 const liquorController = require("./controllers/liquor.js");
-// const restopController = require("./controllers/restop.js");
+const restopController = require("./controllers/restop.js");
 const foodController = require("./controllers/food.js");
 const userController = require("./controllers/user.js");
 //use routes
 app.use("/liquor", liquorController);
-// app.use("/restop", restopController);
+app.use("/restop", restopController);
 app.use("/food", foodController);
 app.use("/user", userController);
 
 //connections
 let MONGO_URI = process.env.MONGO_URI;
 console.log(MONGO_URI);
-// if (process.env.NODE_ENV === "production") {
-//   MONGO_URI = process.env.MONGO_URI;
-// } else {
-//   MONGO_URI = "mongodb://localhost:27017/eloqnt";
-// }
+
 mongoose.connect(MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
