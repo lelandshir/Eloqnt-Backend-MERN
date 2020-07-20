@@ -9,7 +9,7 @@ const restopSchema = new mongoose.Schema({
   orderQty: { type: Number, default: 0 },
   vendor: String,
   notes: String,
-  img: String,
+  img: { type: String, required: false },
 });
 
 const Restop = mongoose.model("restop", restopSchema);
